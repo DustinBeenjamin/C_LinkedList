@@ -28,7 +28,8 @@ int AddAfter(Node* firstNode, Node* secondNode);
 /*
 CompareTo(Node* firstNode, Node* secondNode) - This method compares two Node structs by their integer 'value' field. If either one 
     of the arguments is NULL, then a -2 is returned. If the value of firstNode and secondNode are equal, then a 0 is returned. If 
-    firstNode's value is greater, a 1 is returned. If secondNode's value isgreater, then a -1 is returned. 
+    firstNode's value is greater, a 1 is returned. If secondNode's value is
+    greater, then a -1 is returned. 
 */
 int CompareTo(Node* firstNode, Node* secondNode);
 
