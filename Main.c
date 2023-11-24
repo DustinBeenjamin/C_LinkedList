@@ -19,6 +19,13 @@ int main(void) {
         currentNode = (currentNode->nextNodePtr);
     }
 
+    currentNode = nodeA;
+    Node* nextNode = nodeB;
+    for (int i = 0; i < 2; i++) {
+        fprintf(stdout, "Comparing %d against %d: %d\n", currentNode->value, nextNode->value, CompareTo(currentNode, nextNode));
+        currentNode = nextNode;
+        nextNode = nextNode->nextNodePtr;
+    }
 
 
     return 0;
