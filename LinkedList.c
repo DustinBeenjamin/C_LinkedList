@@ -14,7 +14,7 @@ LinkedList* CreateLinkedList(int value) {
     if (headNode == NULL) {
         return NULL;
     } else {
-        LinkedList* newList = (LinkedList*) malloc(sizeof(LinkedList*));
+        LinkedList* newList = (LinkedList*) malloc(sizeof(LinkedList));
         newList->size = 1;
         newList->head = headNode;
         newList->tail = headNode;
@@ -41,11 +41,11 @@ int PrintList(LinkedList* list) {
         list->current = list->head;
         while (list->current != NULL) {
             int counter = 1;
-            //fprintf(stdout, "Node %d: %d\n", counter, (list->current)->value);
+            fprintf(stdout, "Node %d: %d\n", counter, (list->current)->value);
             counter++;
             list->current = (list->current)->nextNodePtr;
-            return 0;
         }
+        return 0;
     }
 }
 

@@ -13,7 +13,7 @@ int CompareTo(Node* firstNode, Node* secondNode);
 
 /* Function Definitions */
 Node* CreateNode(int value) {
-    Node* newNodePtr = (Node*)malloc(sizeof(Node*));
+    Node* newNodePtr = (Node*)malloc(sizeof(Node));
     newNodePtr->value = value;
     return newNodePtr;
 }
