@@ -1,5 +1,5 @@
-#ifndef NODE_H_
-#define NODE_H_
+#ifndef __NODE_H_
+#define __NODE_H_
 
 
 struct nodeStruct {

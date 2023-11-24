@@ -1,5 +1,7 @@
-#include <Node.h>
+#include "Node.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 
 
 
@@ -10,7 +12,9 @@ int AddAfter(Node* fristNode, Node* secondNode);
 
 /* Function Definitions */
 Node* CreateNode(int value) {
-    return (Node*)malloc(sizeof(Node*));
+    Node* newNodePtr = (Node*)malloc(sizeof(Node*));
+    newNodePtr->value = value;
+    return newNodePtr;
 }
 
 int DestroyNode(Node* targetNode) {
