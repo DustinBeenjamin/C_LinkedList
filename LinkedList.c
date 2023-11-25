@@ -64,14 +64,12 @@ int Remove(LinkedList* list, int value) {
 
 Node* Find(LinkedList* list, int value) {
     if (list == NULL) {
-        printf("Before return NULL\n");
         return NULL;
     }
     Node* previousNode = NULL;
     Node* currentNode = list->head;
     while (currentNode != NULL) {
         if (currentNode->value == value) {
-            fprintf(stdout, "A node with value %d was found after a node with value %d\n", value, previousNode->value);
             return previousNode;
         } else {
             previousNode = currentNode;
