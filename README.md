@@ -1,6 +1,5 @@
 # C_LinkedList
-## This is an extracurriculear project meant to challenge myself and show potential employers my work. 
-Consequently, the purpose of the program is a bit vauge. This is evident by the provided methods of linkedList.c, and the simplicity of the node. Im trying to make it as general purpose as possible, so im slowly adding functionality.
+## This is an extracurriculear project meant to challenge myself and show potential employers my work. Consequently, the purpose of the program is a bit vauge. This is evident by the provided methods of linkedList.c, and the simplicity of the node. Im trying to make it as general purpose as possible, so im slowly adding functionality.
 
 ### Things I want to implement:
 - The ability to swap any two elements
