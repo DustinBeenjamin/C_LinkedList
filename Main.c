@@ -8,32 +8,25 @@
 int main(void) {
 
     LinkedList* listA = CreateLinkedList(1);
-    LAdd(listA, 2);
-    LAdd(listA, 3);
-    LAdd(listA, 4);
-    LAdd(listA, 5);
-    LAdd(listA, 6);
+    // LAdd(listA, 2);
+    // LAdd(listA, 3);
+    // LAdd(listA, 4);
+    // LAdd(listA, 5);
+    // LAdd(listA, 6);
 
     PrintList(listA);
 
 
-    printf("Enter the integer of the value you would like to search\n");
-    int searchValue;
-    scanf("%d", &searchValue);
-    LinkedList* listToSearch = NULL;
+    printf("Enter the integer of the value you would like to remove\n");
+    int targetValue;
+    scanf("%d", &targetValue);
+    LinkedList* targetList = listA;
+
+    Remove(targetList, targetValue);
+
+    PrintList(listA);
     
-    Node* temp = Find(listToSearch, searchValue);
-    if (temp == NULL){
-        if (listToSearch == NULL) {
-            fprintf(stdout, "The search list was NULL\n");
-        } else if (listToSearch->head->value == searchValue) {
-            fprintf(stdout, "The first node was a match\n");
-        } else {
-            fprintf(stdout, "The value was not found\n");
-        }
-    } else {
-        printf("The value %d was found after the value %d\n", searchValue, temp->value);
-    }
+    
 
 
 
