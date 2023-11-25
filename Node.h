@@ -11,6 +11,7 @@ typedef struct nodeStruct Node;
 /*
 CreateNode(int value) - This method makes a new nodeStruct based on the value of the argument passed. After allocating
     memory for it with malloc, it returns the pointer of the node that was created, which may be NULL if malloc failed.
+    TODO explain 'state'
  */
 Node* CreateNode(int value);
 

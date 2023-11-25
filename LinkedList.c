@@ -2,11 +2,15 @@
 #include "Node.h"
 #include <stdlib.h>
 
+/* Error handling variables */
+
 /* Function Stubs*/
 LinkedList* CreateLinkedList(int value);
-int Add(LinkedList* list, Node* newNode);
+int LAdd(LinkedList* list, int value);
 int LinkedAddAfter(LinkedList* list, Node* targetNode, Node* newNode);
 int PrintList(LinkedList* list);
+int Remove(LinkedList* list, int value);
+Node* Find(LinkedList* list, int value);
 
 /* Function Definitions */
 LinkedList* CreateLinkedList(int value) {
@@ -23,13 +27,14 @@ LinkedList* CreateLinkedList(int value) {
     }
 }
 
-int Add(LinkedList* list, Node* newNode) {
-    if (list == NULL || newNode == NULL) {
+int LAdd(LinkedList* list, int value){
+    if (list == NULL) {
         return -1;
     } else {
+        Node* newNode = CreateNode(value);
         AddAfter(list->tail, newNode);
         list->tail = newNode;
-        list->size ++;
+        list->size++;
         return 0;        
     }
 }
@@ -39,8 +44,8 @@ int PrintList(LinkedList* list) {
         return -1;
     } else {
         list->current = list->head;
+        int counter = 1;
         while (list->current != NULL) {
-            int counter = 1;
             fprintf(stdout, "Node %d: %d\n", counter, (list->current)->value);
             counter++;
             list->current = (list->current)->nextNodePtr;
@@ -49,3 +54,29 @@ int PrintList(LinkedList* list) {
     }
 }
 
+int Remove(LinkedList* list, int value) {
+    // if (list == NULL) {
+    //     return -2;
+    // } else {
+
+    // }
+}
+
+Node* Find(LinkedList* list, int value) {
+    if (list == NULL) {
+        printf("Before return NULL\n");
+        return NULL;
+    }
+    Node* previousNode = NULL;
+    Node* currentNode = list->head;
+    while (currentNode != NULL) {
+        if (currentNode->value == value) {
+            fprintf(stdout, "A node with value %d was found after a node with value %d\n", value, previousNode->value);
+            return previousNode;
+        } else {
+            previousNode = currentNode;
+            currentNode = currentNode->nextNodePtr;
+        }
+    }
+    return NULL;
+}
